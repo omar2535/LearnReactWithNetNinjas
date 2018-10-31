@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Ninjas.css'
 // for functional components, this.props is not automatically passed.
 // can destructure to ninja from props to ninjas.props, so it is {ninjas} = props
 const Ninjas = ({deleteNinja, ninjas})=>{
