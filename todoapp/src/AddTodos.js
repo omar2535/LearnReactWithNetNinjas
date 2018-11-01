@@ -3,17 +3,20 @@ import React, { Component } from 'react';
 
 class AddTodoForm extends Component {
     state = {
-        content: null
+        content: ''
     }
 
     handleSubmit = (e)=>{
         e.preventDefault();
         this.props.addTodo(this.state);
+        this.setState({
+            content: ''
+        })
     }
 
     handleChange = (e)=>{
         this.setState({
-            content: e.target.value
+            content: e.target.value,
         })
     }
     
@@ -22,7 +25,7 @@ class AddTodoForm extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="content">Todo:</label>
-                    <input type="text" onChange={this.handleChange} />
+                    <input type="text" onChange={this.handleChange} value={this.state.content}/>
                     <button>Submit</button>
                 </form>
             </div>

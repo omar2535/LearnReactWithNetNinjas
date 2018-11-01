@@ -22,10 +22,9 @@ class App extends Component {
 
   // adds a todo to the todolist
   addTodo = (todoObject) =>{
-    const todos = this.state.todos;
-    todoObject['id'] = Math.random()
+    todoObject.id = Math.random();
+    let todos = [...this.state.todos, todoObject]
     console.log(todoObject);
-    todos.push(todoObject);
     this.setState({
       todos: todos
     })
