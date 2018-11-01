@@ -31,7 +31,6 @@ class AddTodoForm extends Component {
             </div>
         );
     }
-
 }
 
 export default AddTodoForm
