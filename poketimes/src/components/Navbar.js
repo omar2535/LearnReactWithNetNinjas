@@ -4,9 +4,9 @@ import {Link, NavLink, withRouter} from 'react-router-dom'
 // link to tags prevenst redirecting requests to server
 // so that no reloading is done
 const Navbar = (props)=>{
-    setTimeout(()=>{
-        props.history.push('/about');
-    },2000)
+    // setTimeout(()=>{
+    //     props.history.push('/about');
+    // },2000)
     //console.log(props);
     return (
         <nav className="nav-wrapper red darken-3">
